@@ -1,0 +1,21 @@
+{
+  "name": "gis-app",
+  "version": "1.0.0",
+  "description": "An example GIS application.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joonatan Rantanen",
+  "license": "ISC",
+  "dependencies": {
+    "ol": "^6.5.0",
+    "query-overpass": "^1.5.5"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.2",
+    "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.2.15"
+  }
+}
