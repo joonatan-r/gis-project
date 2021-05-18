@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.0">
     <name>cities</name>
+    <wpt lat="41.013611" lon="28.955">
+        <name>Istanbul</name>
+    </wpt>
     <wpt lat="40.183333" lon="29.05">
         <name>Bursa</name>
     </wpt>

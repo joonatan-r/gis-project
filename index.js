@@ -6,11 +6,8 @@ import TileLayer from 'ol/layer/Tile';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import OSM from 'ol/source/OSM';
-import {Circle, Fill, Stroke, Style, Icon} from 'ol/style';
+import {Circle, Fill, Stroke, Style} from 'ol/style';
 import { transform } from 'ol/proj';
-
-// from https://openlayers.org/en/latest/doc/tutorials/bundle.html
-// & https://openlayers.org/en/latest/examples/gpx.html
 
 const fs = require('fs');
 const query_overpass = require('query-overpass');
@@ -34,15 +31,6 @@ const style = {
         width: 3
       })
     }),
-    'Polygon': new Style({
-      fill: new Fill({
-        color: 'rgba(0,255,255,0.5)'
-      }),
-      stroke: new Stroke({
-        color: '#0ff',
-        width: 1
-      })
-    }),
     'MultiPoint': new Style({
       image: new Circle({
         fill: new Fill({
@@ -59,15 +47,6 @@ const style = {
       stroke: new Stroke({
         color: '#00f',
         width: 3
-      })
-    }),
-    'MultiPolygon': new Style({
-      fill: new Fill({
-        color: 'rgba(25,120,255,0.5)'
-      }),
-      stroke: new Stroke({
-        color: '#00f',
-        width: 1
       })
     })
 };
@@ -111,6 +90,12 @@ map.on('click', (e)=>{
       }
       document.getElementById('infotext').innerHTML = info;
       document.getElementById('info').style.display = 'inline';
+    },
+    {
+      layerFilter: function(layer) {
+        if (layer.get('name') === 'routes') return false;
+        return true; 
+      }
     }
   );
   console.log(transform(e.coordinate, 'EPSG:3857', 'EPSG:4326'));
@@ -131,6 +116,7 @@ const routeLayer = new VectorLayer({
     return style[feature.getGeometry().getType()];
   },
 });
+routeLayer.set('name', 'routes');
 map.addLayer(routeLayer);
 
 const routeGPXfeatures = (new GPX()).readFeatures(str, {featureProjection: 'EPSG:3857'});
@@ -158,7 +144,7 @@ cityLayer.getSource().addFeatures(cityGPXfeatures);
 
 const hotelLayer = new VectorLayer({
   source: new VectorSource(),
-  style: function (feature, resolution) {
+  style: function (feature) {
     if (feature.getGeometry().getType() === 'Point') {
       return markerStyle;
     }
