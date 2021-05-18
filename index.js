@@ -72,13 +72,6 @@ const style = {
     })
 };
 const markerStyle = new Style({
-  image: new Icon({
-      anchor: [0.5, 1],
-      scale: 0.1,
-      src: "https://img-premium.flaticon.com/png/512/447/447031.png?token=exp=1621243081~hmac=6e1351bba0a82caf37b634965b0b8ccf"
-  })
-});
-const markerSmallStyle = new Style({
   image: new Circle({
     fill: new Fill({
       color: 'rgba(255,0,0,0.5)'
@@ -98,14 +91,26 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: [0, 0],
-    zoom: 0
+    center: [7659812, 4669423],
+    zoom: 4
   })
 });
 map.on('click', (e)=>{
   map.forEachFeatureAtPixel(e.pixel, 
     function(feature) {
-      console.log(feature.getProperties().name); // TODO: name:en or smth
+      const props = feature.getProperties();
+      let info = '';
+
+      if (props.name) {
+        info = props.name;
+      } else if (props.tags && props.tags.name) {
+        info = props.tags.name;
+      }
+      if (!info) {
+        info = 'No name available';
+      }
+      document.getElementById('infotext').innerHTML = info;
+      document.getElementById('info').style.display = 'inline';
     }
   );
   console.log(transform(e.coordinate, 'EPSG:3857', 'EPSG:4326'));
@@ -116,23 +121,20 @@ map.on('click', (e)=>{
 let str = "";
 
 try {
-  str = fs.readFileSync('routes.gpx', 'utf8'); // openrouteservice
+  str = fs.readFileSync('routes.gpx', 'utf8');
 } catch (e) {
   console.log(e);
 }
 const routeLayer = new VectorLayer({
   source: new VectorSource(),
-  style: function (feature, resolution) {
-    if (feature.getGeometry().getType() === 'Point' && resolution < 400) {
-      return markerStyle;
-    }
+  style: function (feature) {
     return style[feature.getGeometry().getType()];
   },
 });
 map.addLayer(routeLayer);
 
-const GPXfeatures = (new GPX()).readFeatures(str, {featureProjection: 'EPSG:3857'});
-routeLayer.getSource().addFeatures(GPXfeatures);
+const routeGPXfeatures = (new GPX()).readFeatures(str, {featureProjection: 'EPSG:3857'});
+routeLayer.getSource().addFeatures(routeGPXfeatures);
 
 // -----------------------
 
@@ -158,15 +160,14 @@ const hotelLayer = new VectorLayer({
   source: new VectorSource(),
   style: function (feature, resolution) {
     if (feature.getGeometry().getType() === 'Point') {
-      // if (resolution < 100) return markerStyle;
-      return markerSmallStyle;
+      return markerStyle;
     }
     return style[feature.getGeometry().getType()];
   },
 });
 map.getLayers().insertAt(1, hotelLayer);
 
-document.getElementById("button").addEventListener("click", 
+document.getElementById('button').addEventListener('click', 
   function() {
     // Query hotels. Query bounds order s,w,n,e
 
@@ -181,8 +182,8 @@ document.getElementById("button").addEventListener("click",
     query_overpass(queryStr, 
       function(error, data) {
         if (!error) {
-          const testFeatures = (new GeoJSON()).readFeatures(data, {featureProjection: 'EPSG:3857'});
-          hotelLayer.getSource().addFeatures(testFeatures);
+          const hotelFeatures = (new GeoJSON()).readFeatures(data, {featureProjection: 'EPSG:3857'});
+          hotelLayer.getSource().addFeatures(hotelFeatures);
         } else {
           console.log(error);
         }
