@@ -19,11 +19,11 @@ const style = {
     'Point': new Style({
       image: new Circle({
         fill: new Fill({
-          color: 'rgba(0,255,0,0.5)'
+          color: 'rgba(0,200,0,0.5)'
         }),
         radius: 5,
         stroke: new Stroke({
-          color: '#ff0',
+          color: '#0f0',
           width: 1
         })
       })
@@ -116,7 +116,7 @@ map.on('click', (e)=>{
 let str = "";
 
 try {
-  str = fs.readFileSync('data1.gpx', 'utf8'); // openrouteservice
+  str = fs.readFileSync('routes.gpx', 'utf8'); // openrouteservice
 } catch (e) {
   console.log(e);
 }
@@ -137,7 +137,7 @@ routeLayer.getSource().addFeatures(GPXfeatures);
 // -----------------------
 
 try {
-  str = fs.readFileSync('data.gpx', 'utf8');
+  str = fs.readFileSync('cities.gpx', 'utf8');
 } catch (e) {
   console.log(e);
 }
@@ -166,23 +166,27 @@ const hotelLayer = new VectorLayer({
 });
 map.getLayers().insertAt(1, hotelLayer);
 
-// Query hotels. Query bounds order s,w,n,e
+document.getElementById("button").addEventListener("click", 
+  function() {
+    // Query hotels. Query bounds order s,w,n,e
 
-let queryStr = '[out:json];';
-
-for (let f of cityGPXfeatures) {
-  let coords = transform(f.getGeometry().flatCoordinates, 'EPSG:3857', 'EPSG:4326');
-  queryStr += 'node[tourism=hotel](' + (coords[1] - 0.05) + ', ' + (coords[0] - 0.05) + ', ' + 
-              (coords[1] + 0.05) + ', ' + (coords[0] + 0.05) + ');out;';
-}
-
-query_overpass(queryStr, 
-  function(error, data) {
-    if (!error) {
-      const testFeatures = (new GeoJSON()).readFeatures(data, {featureProjection: 'EPSG:3857'});
-      hotelLayer.getSource().addFeatures(testFeatures);
-    } else {
-      console.log(error);
+    let queryStr = '[out:json];';
+    
+    for (let f of cityGPXfeatures) {
+      let coords = transform(f.getGeometry().flatCoordinates, 'EPSG:3857', 'EPSG:4326');
+      queryStr += 'node[tourism=hotel](' + (coords[1] - 0.05) + ', ' + (coords[0] - 0.05) + ', ' + 
+                  (coords[1] + 0.05) + ', ' + (coords[0] + 0.05) + ');out;';
     }
+    
+    query_overpass(queryStr, 
+      function(error, data) {
+        if (!error) {
+          const testFeatures = (new GeoJSON()).readFeatures(data, {featureProjection: 'EPSG:3857'});
+          hotelLayer.getSource().addFeatures(testFeatures);
+        } else {
+          console.log(error);
+        }
+      }
+    );
   }
 );

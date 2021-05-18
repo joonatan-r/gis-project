@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0">
+    <name>cities</name>
+    <wpt lat="40.183333" lon="29.05">
+        <name>Bursa</name>
+    </wpt>
+    <wpt lat="40.170278" lon="31.921111">
+        <name>Beypazarı</name>
+    </wpt>
+    <wpt lat="40.466667" lon="31.216667">
+        <name>Mudurnu</name>
+    </wpt>
+    <wpt lat="40.396944" lon="30.492778">
+        <name>Taraklı</name>
+    </wpt>
+    <wpt lat="37.866667" lon="32.483333">
+        <name>Konya</name>
+    </wpt>
+    <wpt lat="37" lon="35.321333">
+        <name>Adana</name>
+    </wpt>
+    <wpt lat="38.42" lon="27.14">
+        <name>İzmir</name>
+    </wpt>
+    <wpt lat="41.005" lon="39.7225">
+        <name>Trabzon</name>
+    </wpt>
+    <wpt lat="40.395278" lon="49.882222">
+        <name>Baku</name>
+    </wpt>
+    <wpt lat="40.630278" lon="48.641389">
+        <name>Shamakhi</name>
+    </wpt>
+    <wpt lat="40.374444" lon="47.126667">
+        <name>Barda</name>
+    </wpt>
+    <wpt lat="41.7225" lon="44.7925">
+        <name>Tbilisi</name>
+    </wpt>
+    <wpt lat="41.645833" lon="41.641667">
+        <name>Batumi</name>
+    </wpt>
+    <wpt lat="42.15" lon="41.666667">
+        <name>Poti</name>
+    </wpt>
+    <wpt lat="40.181389" lon="44.514444">
+        <name>Yerevan</name>
+    </wpt>
+    <wpt lat="33.270833" lon="35.196111">
+        <name>Tyre</name>
+    </wpt>
+    <wpt lat="36.216667" lon="37.166667">
+        <name>Aleppo</name>
+    </wpt>
+    <wpt lat="34.883333" lon="35.883333">
+        <name>Tartus</name>
+    </wpt>
+    <wpt lat="34.730833" lon="36.709444">
+        <name>Homs</name>
+    </wpt>
+    <wpt lat="33.513056" lon="36.291944">
+        <name>Damascus</name>
+    </wpt>
+    <wpt lat="35.95" lon="39.0167">
+        <name>Raqqa</name>
+    </wpt>
+    <wpt lat="36.34" lon="43.13">
+        <name>Mosul</name>
+    </wpt>
+    <wpt lat="36.191188" lon="44.009189">
+        <name>Erbil</name>
+    </wpt>
+    <wpt lat="34.198333" lon="43.874167">
+        <name>Samarra</name>
+    </wpt>
+    <wpt lat="33.353611" lon="43.779444">
+        <name>Fallujah</name>
+    </wpt>
+    <wpt lat="33.333333" lon="44.383333">
+        <name>Baghdad</name>
+    </wpt>
+    <wpt lat="33.75" lon="44.633333">
+        <name>Baqubah</name>
+    </wpt>
+    <wpt lat="38.066667" lon="46.3">
+        <name>Tabriz</name>
+    </wpt>
+    <wpt lat="36.666667" lon="48.483333">
+        <name>Zanjan</name>
+    </wpt>
+    <wpt lat="37.280833" lon="49.583056">
+        <name>Rasht</name>
+    </wpt>
+    <wpt lat="34.314167" lon="47.065">
+        <name>Kermanshah</name>
+    </wpt>
+    <wpt lat="34.8" lon="48.516667">
+        <name>Hamadan</name>
+    </wpt>
+    <wpt lat="35.583333" lon="51.433333">
+        <name>Ray</name>
+    </wpt>
+    <wpt lat="36.168333" lon="54.348056">
+        <name>Damghan</name>
+    </wpt>
+    <wpt lat="36.2125" lon="57.681944">
+        <name>Sabzevar</name>
+    </wpt>
+    <wpt lat="36.213333" lon="58.795833">
+        <name>Nishapur</name>
+    </wpt>
+    <wpt lat="36.3" lon="59.6">
+        <name>Mashhad</name>
+    </wpt>
+    <wpt lat="29.106111" lon="58.356944">
+        <name>Bam</name>
+    </wpt>
+    <wpt lat="31.897222" lon="54.367778">
+        <name>Yazd</name>
+    </wpt>
+    <wpt lat="36.266667" lon="50">
+        <name>Qazvin</name>
+    </wpt>
+    <wpt lat="42.333333" lon="59.15">
+        <name>Konye-Urgench</name>
+    </wpt>
+    <wpt lat="39.083333" lon="63.566667">
+        <name>Türkmenabat</name>
+    </wpt>
+    <wpt lat="39.766667" lon="64.433333">
+        <name>Bukhara</name>
+    </wpt>
+    <wpt lat="39.05" lon="66.833333">
+        <name>Shahrisabz</name>
+    </wpt>
+    <wpt lat="39.7" lon="66.983333">
+        <name>Samarkand</name>
+    </wpt>
+    <wpt lat="41.3" lon="69.266667">
+        <name>Tashkent</name>
+    </wpt>
+    <wpt lat="40.528611" lon="70.9425">
+        <name>Kokand</name>
+    </wpt>
+    <wpt lat="40.783333" lon="72.333333">
+        <name>Andijan</name>
+    </wpt>
+    <wpt lat="40.283333" lon="69.633333">
+        <name>Khujand</name>
+    </wpt>
+    <wpt lat="39.910833" lon="69.006389">
+        <name>Istaravshan</name>
+    </wpt>
+    <wpt lat="42.3" lon="69.766667">
+        <name>Sayram</name>
+    </wpt>
+    <wpt lat="42.9" lon="71.366667">
+        <name>Taraz</name>
+    </wpt>
+    <wpt lat="43.283333" lon="68.266667">
+        <name>Turkistan</name>
+    </wpt>
+    <wpt lat="43.2775" lon="76.895833">
+        <name>Almaty</name>
+    </wpt>
+    <wpt lat="42.833333" lon="75.283333">
+        <name>Tokmok</name>
+    </wpt>
+    <wpt lat="42.874722" lon="74.612222">
+        <name>Bishkek</name>
+    </wpt>
+    <wpt lat="40.53" lon="72.8">
+        <name>Osh</name>
+    </wpt>
+    <wpt lat="36.766667" lon="66.9">
+        <name>Balkh</name>
+    </wpt>
+    <wpt lat="34.341944" lon="62.203056">
+        <name>Herat</name>
+    </wpt>
+    <wpt lat="31.616667" lon="65.716667">
+        <name>Kandahar</name>
+    </wpt>
+    <wpt lat="34.825" lon="67.833333">
+        <name>Bamyan</name>
+    </wpt>
+    <wpt lat="34.525278" lon="69.178333">
+        <name>Kabul</name>
+    </wpt>
+    <wpt lat="30.183333" lon="67">
+        <name>Quetta</name>
+    </wpt>
+    <wpt lat="34.016667" lon="71.583333">
+        <name>Peshawar</name>
+    </wpt>
+    <wpt lat="33.745833" lon="72.7875">
+        <name>Taxila</name>
+    </wpt>
+    <wpt lat="30.197778" lon="71.469722">
+        <name>Multan</name>
+    </wpt>
+    <wpt lat="22.3" lon="87.92">
+        <name>Tamluk</name>
+    </wpt>
+    <wpt lat="34.16" lon="77.58">
+        <name>Leh</name>
+    </wpt>
+    <wpt lat="26.913" lon="70.915">
+        <name>Jaisalmer</name>
+    </wpt>
+    <wpt lat="27.4925" lon="77.673611">
+        <name>Mathura</name>
+    </wpt>
+    <wpt lat="25.318889" lon="83.012778">
+        <name>Varanasi</name>
+    </wpt>
+    <wpt lat="27.7172" lon="85.324">
+        <name>Kathmandu</name>
+    </wpt>
+    <wpt lat="22.335" lon="91.8325">
+        <name>Chittagong</name>
+    </wpt>
+    <wpt lat="23.45" lon="91.2">
+        <name>Comilla</name>
+    </wpt>
+    <wpt lat="23.763889" lon="90.388889">
+        <name>Dhaka</name>
+    </wpt>
+    <wpt lat="27.55" lon="90.733333">
+        <name>Jakar</name>
+    </wpt>
+    <wpt lat="27.433333" lon="89.416667">
+        <name>Paro</name>
+    </wpt>
+    <wpt lat="39.4681" lon="75.9938">
+        <name>Kashgar</name>
+    </wpt>
+    <wpt lat="41.185" lon="80.2904">
+        <name>Aksu</name>
+    </wpt>
+    <wpt lat="41.7259" lon="86.1746">
+        <name>Korla</name>
+    </wpt>
+    <wpt lat="42.058611" lon="86.568333">
+        <name>Karasahr</name>
+    </wpt>
+    <wpt lat="42.9512" lon="89.1895">
+        <name>Turpan</name>
+    </wpt>
+    <wpt lat="42.8193" lon="93.5151">
+        <name>Hami</name>
+    </wpt>
+    <wpt lat="43.8225" lon="87.6125">
+        <name>Ürümqi</name>
+    </wpt>
+    <wpt lat="37.1" lon="80.016667">
+        <name>Hotan</name>
+    </wpt>
+    <wpt lat="37.05" lon="82.683333">
+        <name>Niya</name>
+    </wpt>
+    <wpt lat="38.683056" lon="87.329722">
+        <name>Waxxari</name>
+    </wpt>
+    <wpt lat="39.018056" lon="88.168056">
+        <name>Ruoqiang</name>
+    </wpt>
+    <wpt lat="40.1421" lon="94.6619">
+        <name>Dunhuang</name>
+    </wpt>
+    <wpt lat="39.7732" lon="98.2882">
+        <name>Jiayuguan</name>
+    </wpt>
+    <wpt lat="39.7334" lon="98.4943">
+        <name>Jiuquan</name>
+    </wpt>
+    <wpt lat="38.9248" lon="100.4499">
+        <name>Zhangye</name>
+    </wpt>
+    <wpt lat="37.929" lon="102.638">
+        <name>Wuwei</name>
+    </wpt>
+    <wpt lat="36.0606" lon="103.8268">
+        <name>Lanzhou</name>
+    </wpt>
+    <wpt lat="34.5815" lon="105.7248">
+        <name>Tianshui</name>
+    </wpt>
+    <wpt lat="34.363" lon="107.238">
+        <name>Baoji</name>
+    </wpt>
+    <wpt lat="34.265" lon="108.954">
+        <name>Xi'an</name>
+    </wpt>
+    <wpt lat="36.2" lon="36.15">
+        <name>Antakya</name>
+    </wpt>
+    <wpt lat="34.56" lon="38.267222">
+        <name>Palmyra</name>
+    </wpt>
+    <wpt lat="34.767616" lon="40.645784">
+        <name>Al-Salihiyah</name>
+    </wpt>
+    <wpt lat="37.933333" lon="58.366667">
+        <name>Ashgabat</name>
+    </wpt>
+    <wpt lat="37.6" lon="61.833333">
+        <name>Mary</name>
+    </wpt>
+    <wpt lat="24.86" lon="67.01">
+        <name>Karachi</name>
+    </wpt>
+    <wpt lat="25.6" lon="85.1">
+        <name>Patna</name>
+    </wpt>
+</gpx>
