@@ -8,9 +8,8 @@ import VectorSource from 'ol/source/Vector';
 import OSM from 'ol/source/OSM';
 import {Circle, Fill, Stroke, Style} from 'ol/style';
 import { transform } from 'ol/proj';
-
-const fs = require('fs');
-const query_overpass = require('query-overpass');
+import fs from 'fs';
+import query_overpass from 'query-overpass';
 
 const style = {
     'Point': new Style({
@@ -93,8 +92,7 @@ map.on('click', (e)=>{
     },
     {
       layerFilter: function(layer) {
-        if (layer.get('name') === 'routes') return false;
-        return true; 
+        return layer.get('name') !== 'routes';
       }
     }
   );
